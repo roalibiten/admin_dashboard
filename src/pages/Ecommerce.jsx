@@ -19,7 +19,7 @@ const Ecommerce = () => {
                 Earnings
               </p>
               <p className='text-2xl'>
-                asfd
+                $12,752
               </p>
             </div>
           </div>
@@ -74,10 +74,10 @@ const Ecommerce = () => {
                   <div>
                     <p>
                       <span className=' text-3xl font-semibold'>
-                        asdfasdfa
+                        $9,427
                       </span>
                       <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>
-                        asdfa
+                        %11.8
                       </span>
                     </p>
                     <p className=' text-gray-500 mt-1'>Budget</p>
@@ -85,7 +85,7 @@ const Ecommerce = () => {
                   <div className='mt-8'>
                     <p>
                       <span className=' text-3xl font-semibold'>
-                        asdfasdfa
+                        $1,710
                       </span>
                     </p>
                     <p className=' text-gray-500 mt-1'>Expense</p>

@@ -20,17 +20,19 @@ const Sidebar = () => {
   const activeLink='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2'
   const normalLink='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray '
   return (
-    <div className=' ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
+    <div className=' bg-half-transparent md:bg-transparent  w-screen md:w-auto nav-item top-0 right-0 md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
+
+    <div className=' dark:bg-secondary-dark-bg bg-white w-400  nav-item pl-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 '>
       {activeMenu&&(
         <>
         <div className=' flex justify-between items-center'>
           <Link to="/"  onClick={handleCloseSideBar} className=" items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight text-slate-900 dark:text-white" >
             <SiShopware/>
-            <span>Shoppy</span>
+            <span>Admin Dashboard</span>
           </Link>
           <TooltipComponent content="Menu" position='BottomCenter'>
             <button type='button' onClick={()=>setActiveMenu((prevActiveMenu)=>!prevActiveMenu)} className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden">
-              <MdOutlineCancel/>
+              <MdOutlineCancel className=" dark:text-white"/>
             </button>
           </TooltipComponent>
         </div>
@@ -60,6 +62,7 @@ const Sidebar = () => {
             ))}
         </div>
       </>)}
+    </div>
     </div>
   )
 }
