@@ -14,7 +14,7 @@ import './App.css';
 
 
 function App() {
-  const {activeMenu} = useStateContext()
+  const {activeMenu, themeSettings, setThemeSettings,currentColor} = useStateContext()
 
   return (
     <div className="App">
@@ -25,7 +25,8 @@ function App() {
               <button 
                 type='button' 
                 className=' text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white'
-                style={{background:'blue', borderRadius:'50%'}}
+                style={{background:currentColor, borderRadius:'50%'}}
+                onClick={()=>setThemeSettings(true)}
               >
                 <FiSettings/>
               </button>
@@ -48,9 +49,9 @@ function App() {
             <div className=' fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full '>
               <Navbar/>
             </div>
-          </div>
 
           <div>
+            {themeSettings&&<ThemeSettings/>}
             <Routes>
               {/** Dashboard */}
               <Route path='/' element={<Ecommerce/>} />
@@ -60,9 +61,9 @@ function App() {
               <Route path='/employees' element={<Employees/>} />
               <Route path='/customers' element={<Customers/>} />
               {/** Apps */}
+              <Route path='/calendar' element={<Calendar/>} />
               <Route path='/kanban' element={<Kanban/>} />
               <Route path='/editor' element={<Editor/>} />
-              <Route path='/calender' element={<Calendar/>} />
               <Route path='/color-picker' element={<ColorPicker/>} />
               {/** Charts */}
               <Route path='/line' element={<Line/>} />
@@ -76,6 +77,8 @@ function App() {
 
             </Routes>
           </div>
+          </div>
+
 
         </div>
       </BrowserRouter>
