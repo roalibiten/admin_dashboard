@@ -26,7 +26,7 @@ const Sidebar = () => {
       {activeMenu&&(
         <>
         <div className=' flex justify-between items-center'>
-          <Link to="/"  onClick={handleCloseSideBar} className=" items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight text-slate-900 dark:text-white" >
+          <Link to="/admin_dashboard"  onClick={handleCloseSideBar} className=" items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight text-slate-900 dark:text-white" >
             <SiShopware/>
             <span>Admin Dashboard</span>
           </Link>
@@ -43,7 +43,7 @@ const Sidebar = () => {
                   {item.title}
                 </p>
                 {item.links.map((link)=>(
-                  <NavLink to={`/${link.name}`} key={link.name}
+                  <NavLink to={`/admin_dashboard/${link.name}`} key={link.name}
                     style={({isActive})=>({
                       backgroundColor: isActive? currentColor : ''
                     })}
